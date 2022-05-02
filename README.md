@@ -6,9 +6,9 @@ Aplicación compuesta por servicios encargados de calcular la posición de una n
 
 ![Springboot - 2.5.2](https://img.shields.io/badge/Springboot-2.5.2-green?logo=spring&logoColor=white)
 
-[![NPM Version][npm-image]][npm-url]
+![Java - 1.8](https://img.shields.io/badge/Springboot-2.5.2-green?logo=java&logoColor=white)
 
-[![contributions - welcome](https://img.shields.io/badge/contributions-welcome-blue)](/CONTRIBUTING.md "Go to contributions doc")
+![Maven - 3.6.3](https://img.shields.io/badge/Springboot-2.5.2-green?logo=java&logoColor=white)
 
 ### Pre-requisitos 📋
 

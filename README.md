@@ -4,7 +4,7 @@ Aplicación compuesta por servicios encargados de calcular la posición de una n
 
 ## Tecnologías 🔧
 
-![Springboot - 2.5.2](https://img.shields.io/badge/2.5.2-SpringBoot-green?logo=spring&logoColor=white)
+![2.5.2 - Springboot](https://img.shields.io/badge/SpringBoot-2.5.2-green?logo=spring&logoColor=white)
 
 ![Java - 1.8](https://img.shields.io/badge/Java-1.8-red?logo=java&logoColor=white)
 

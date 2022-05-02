@@ -1,44 +1,123 @@
 # FuegoQuasarMeli
 
-Aplicación compuesta por servicios encargados de calcular la posición de una nave a partir de la posición y distancia de tres satélites.
+Aplicación compuesta por servicios encargados de calcular la posición y un mensaje secreto emitido por una nave a partir de la posición y distancia de tres satélites.
 
 ## Tecnologías 🔧
 
-![2.5.2 - Springboot](https://img.shields.io/badge/SpringBoot-2.5.2-green?logo=spring&logoColor=white)
+![Springboot - 2.5.2](https://img.shields.io/badge/SpringBoot-2.5.2-green?logo=spring&logoColor=white)
 
 ![Java - 1.8](https://img.shields.io/badge/Java-1.8-red?logo=java&logoColor=white)
 
 ![Maven - 3.6.3](https://img.shields.io/badge/Maven-3.6.3-yellow?logo=maven&logoColor=white)
 
-### Pre-requisitos 📋
+## Despliegue Local 🔩
 
-_Que cosas necesitas para instalar el software y como instalarlas_
+Ubicados en la raiz del proyecto ejecutar los siguientes comandos:
 
-```
-Da un ejemplo
-```
+1. Compilar y generar el .jar
+	* mvn clean install
 
-### Instalación 🔧
+2. Iniciar el servicios
+    * java -jar "./target/FuegoQuasar-0.0.1-SNAPSHOT.jar"
 
-_Una serie de ejemplos paso a paso que te dice lo que debes ejecutar para tener un entorno de desarrollo ejecutandose_
+## Servicios ⚙️
 
-_Dí cómo será ese paso_
+La información del detalle del consumo de los servicios (peticiones, respuestas y códigos de respuesta http) se puede encontrar en el siguiente swagger:
+* http://localhost:8080/swagger-ui.html#/
 
-```
-Da un ejemplo
-```
+### GetShipInformation**: Determina la ubicación de la nave y el mensaje que emite, a partir de los satélites enviados en la petición.
+  * _Método HTTP:_ POST
+  * _Endpoint:_ http://localhost:8080/topsecret
+  * _Payload ejemplo:_ 
+  ```
+	{
+		"satellites":[
+			{
+					"name": "kenobi",
+					"distance": "600",
+					"message": ["", "mensaje", ""]
+			},
+			{
+					"name": "skywalker",
+					"distance": 100,
+					"message": ["", "", "secreto"]
+			},
+			{
+					"name": "sato",
+					"distance": 445.09335,
+					"message": ["Es", "", ""]
+			}
+		]
+	}
+    ```
 
-_Y repite_
-
-```
-hasta finalizar
-```
-
-_Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo_
-
-## Ejecutando las pruebas ⚙️
-
-_Explica como ejecutar las pruebas automatizadas para este sistema_
+### **SetSatelliteInformation** Envía la información de un satélite para registrar o actualizar en memoria.
+  * _Método HTTP:_ POST
+  * _Endpoint:_ http://localhost:8080/topsecret_split/{nombre_satelite}
+  * _Payload ejemplo:_ 
+  ```
+	{
+		"distance": "600",
+		"message": ["", "mensaje", ""]
+	}
+  ```
+  
+### **GetSatelliteInformation** Consulta por nombre, la información de un satélite registrado en memoria.
+  * _Método HTTP:_ GET
+  * _Endpoint:_ http://localhost:8080/topsecret_split/{nombre_satelite}
+  * _Respuesta ejemplo:_ 
+	```
+	{
+		"name": "skywalker",
+		"distance": 100.0,
+		"message": [
+			"",
+			"",
+			"secreto"
+		]
+	}
+    ```
+	
+### **GetSatellitesList** Consulta la lista de satélites registrados en memoria.
+  * _Método HTTP:_ GET
+  * _Endpoint:_ http://localhost:8080/topsecret_split/satellites
+  * _Respuesta ejemplo:_ 
+	```
+	[
+		{
+			"name": "skywalker",
+			"distance": 100.0,
+			"message": [
+				"",
+				"",
+				"secreto"
+			]
+		},
+		{
+			"name": "kenobi",
+			"distance": 600.0,
+			"message": [
+				"",
+				"mensaje",
+				""
+			]
+		}
+	]
+    ```
+	
+### **GetShipInformation** Determina la ubicación de la nave y el mensaje que emite, a partir de los satélites registrados previamente.
+  * _Método HTTP:_ GET
+  * _Endpoint:_ http://localhost:8080/topsecret_split/
+  * _Respuesta ejemplo:_ 
+	```
+	{
+		"position": {
+			"x": 67.56761,
+			"y": -5.4054565
+		},
+		"message": "Es mensaje secreto "
+	}
+    ```
 
 ### Analice las pruebas end-to-end 🔩
 

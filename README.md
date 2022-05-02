@@ -21,7 +21,7 @@ Ubicados en la raiz del proyecto ejecutar los siguientes comandos:
 1. Compilar y generar el .jar
 	* mvn clean install
 
-2. Iniciar el servicios
+2. Iniciar el servicio
     * java -jar "./target/FuegoQuasar-0.0.1-SNAPSHOT.jar"
 
 ## ⚙️ Servicios 
@@ -134,23 +134,21 @@ Determina la ubicación de la nave y el mensaje que emite, a partir de los saté
 	}
 ```
 
-### Pruebas Unitarias ⌨️
+## ⌨️ Pruebas Unitarias 
 
 Coverage lineas: 89.5 %
 Coverage Instrucciónes: 87.3 %
 Coverage Métodos: 74.4 %
 
-## Despliegue 📦
+## 📦 Despliegue 
 
 _Agrega notas adicionales sobre como hacer deploy_
 
-## Documentación adicional 📖
+## 📖 Documentación adicional 
 
 La información del detalle del consumo de los servicios (peticiones, respuestas y códigos de respuesta http) se puede encontrar en el siguiente swagger:
 * http://localhost:8080/swagger-ui.html#/
 
-## Autor ✒️
+## ✒️ Autor 
 
-* **Diego Cuervo** - [diegofc6](diegof.cuervog@gmail.com)
-
-También puedes mirar la lista de todos los [contribuyentes](https://github.com/your/project/contributors) quíenes han participado en este proyecto. 
+* **Diego Cuervo** - _diegof.cuervog@gmail.com_

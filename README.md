@@ -4,8 +4,8 @@ Aplicación compuesta por servicios encargados de calcular la posición de una n
 
 ## Tecnologías 🔧
 
-![Springboot - 2.5.2](https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white)
-
+![Springboot - 2.5.2][(https://img.shields.io/badge/Springboot-6DB33F?style=for-the-badge&logo=spring&logoColor=white)]
+[![NPM Version][npm-image]][npm-url]
 
 ### Pre-requisitos 📋
 

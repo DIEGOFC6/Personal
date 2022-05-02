@@ -25,11 +25,12 @@ Ubicados en la raiz del proyecto ejecutar los siguientes comandos:
 La información del detalle del consumo de los servicios (peticiones, respuestas y códigos de respuesta http) se puede encontrar en el siguiente swagger:
 * http://localhost:8080/swagger-ui.html#/
 
-### GetShipInformation**: Determina la ubicación de la nave y el mensaje que emite, a partir de los satélites enviados en la petición.
+### **GetShipInformation:** 
+Determina la ubicación de la nave y el mensaje que emite, a partir de los satélites enviados en la petición.
   * _Método HTTP:_ POST
   * _Endpoint:_ http://localhost:8080/topsecret
   * _Payload ejemplo:_ 
-  ```
+```
 	{
 		"satellites":[
 			{
@@ -49,24 +50,35 @@ La información del detalle del consumo de los servicios (peticiones, respuestas
 			}
 		]
 	}
-    ```
-
-### **SetSatelliteInformation** Envía la información de un satélite para registrar o actualizar en memoria.
+```
+  * _Respuesta ejemplo:_ 
+```
+	{
+		"position": {
+			"x": 67.56761,
+			"y": -5.4054565
+		},
+		"message": "Es mensaje secreto "
+	}
+```
+### **SetSatelliteInformation**
+Envía la información de un satélite para registrar o actualizar en memoria.
   * _Método HTTP:_ POST
   * _Endpoint:_ http://localhost:8080/topsecret_split/{nombre_satelite}
   * _Payload ejemplo:_ 
-  ```
+```
 	{
 		"distance": "600",
 		"message": ["", "mensaje", ""]
 	}
-  ```
+```
   
-### **GetSatelliteInformation** Consulta por nombre, la información de un satélite registrado en memoria.
+### **GetSatelliteInformation** 
+Consulta por nombre, la información de un satélite registrado en memoria.
   * _Método HTTP:_ GET
   * _Endpoint:_ http://localhost:8080/topsecret_split/{nombre_satelite}
   * _Respuesta ejemplo:_ 
-	```
+```
 	{
 		"name": "skywalker",
 		"distance": 100.0,
@@ -76,13 +88,14 @@ La información del detalle del consumo de los servicios (peticiones, respuestas
 			"secreto"
 		]
 	}
-    ```
+```
 	
-### **GetSatellitesList** Consulta la lista de satélites registrados en memoria.
+### **GetSatellitesList** 
+Consulta la lista de satélites registrados en memoria.
   * _Método HTTP:_ GET
   * _Endpoint:_ http://localhost:8080/topsecret_split/satellites
   * _Respuesta ejemplo:_ 
-	```
+```
 	[
 		{
 			"name": "skywalker",
@@ -103,13 +116,14 @@ La información del detalle del consumo de los servicios (peticiones, respuestas
 			]
 		}
 	]
-    ```
+```
 	
-### **GetShipInformation** Determina la ubicación de la nave y el mensaje que emite, a partir de los satélites registrados previamente.
+### **GetShipInformation** 
+Determina la ubicación de la nave y el mensaje que emite, a partir de los satélites registrados previamente.
   * _Método HTTP:_ GET
   * _Endpoint:_ http://localhost:8080/topsecret_split/
   * _Respuesta ejemplo:_ 
-	```
+```
 	{
 		"position": {
 			"x": 67.56761,
@@ -117,7 +131,7 @@ La información del detalle del consumo de los servicios (peticiones, respuestas
 		},
 		"message": "Es mensaje secreto "
 	}
-    ```
+```
 
 ### Analice las pruebas end-to-end 🔩
 

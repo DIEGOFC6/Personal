@@ -4,11 +4,11 @@ Aplicación compuesta por servicios encargados de calcular la posición de una n
 
 ## Tecnologías 🔧
 
-[![contributions - welcome](https://img.shields.io/badge/contributions-welcome-blue)](/CONTRIBUTING.md "Go to contributions doc")
-
-[![Springboot - 2.5.2](https://img.shields.io/badge/Springboot-2.5.2-green?style=for-the-badge)]
+![Springboot - 2.5.2](https://img.shields.io/badge/Springboot-2.5.2-green?logo=spring&logoColor=white)
 
 [![NPM Version][npm-image]][npm-url]
+
+[![contributions - welcome](https://img.shields.io/badge/contributions-welcome-blue)](/CONTRIBUTING.md "Go to contributions doc")
 
 ### Pre-requisitos 📋
 

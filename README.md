@@ -1,6 +1,6 @@
 # FuegoQuasarMeli
 
-Aplicación compuesta por servicios encargados de calcular la posición y un mensaje secreto emitido por una nave a partir de la posición y distancia de tres satélites.
+Aplicación compuesta por servicios Rest encargados de calcular la posición y un mensaje secreto emitido por una nave a partir de la posición y distancia de tres satélites.
 
 ## 🔧 Tecnologías 
 
@@ -14,7 +14,7 @@ Aplicación compuesta por servicios encargados de calcular la posición y un men
 
 ![JUnit - 4.13.2](https://img.shields.io/badge/JUnit-2.9.2-blue?logo=JUnit&logoColor=white)
 
-## 🔩 Despliegue Local 
+## 📦 Despliegue Local 
 
 Ubicados en la raiz del proyecto ejecutar los siguientes comandos:
 
@@ -125,10 +125,10 @@ Determina la ubicación de la nave y el mensaje que emite, a partir de los saté
   * _Endpoint:_ http://localhost:8080/topsecret_split/
   * _Respuesta ejemplo:_ 
 ```
-	{
-		"position": {
-			"x": 67.56761,
-			"y": -5.4054565
+	###{
+	###	"position": {
+	###		"x": 67.56761,
+	###		"y": -5.4054565
 		},
 		"message": "Es mensaje secreto "
 	}
@@ -136,13 +136,9 @@ Determina la ubicación de la nave y el mensaje que emite, a partir de los saté
 
 ## ⌨️ Pruebas Unitarias 
 
-Coverage lineas: 89.5 %
-Coverage Instrucciónes: 87.3 %
-Coverage Métodos: 74.4 %
-
-## 📦 Despliegue 
-
-_Agrega notas adicionales sobre como hacer deploy_
+- Coverage lineas: 89.5 %
+- Coverage Instrucciónes: 87.3 %
+- Coverage Métodos: 74.4 %
 
 ## 📖 Documentación adicional 
 
